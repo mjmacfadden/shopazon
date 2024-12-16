@@ -23,12 +23,12 @@ const products = [
     },
     {
         id: 3,
-        name: "New Balance",
+        name: "Canvas Lunch Bag",
         description: "This is the description for product 3.",
-        image: "img/newbalance.jpg",
+        image: "img/lunch_bag.jpg",
         price: "$60.00",
         url: "https://a.co/d/9uZGOwd",
-        asin: "B0CKWJ8Z5X"
+        asin: "B07FVGMY99"
     }
 
 
@@ -132,6 +132,9 @@ document.getElementById('checkout-button').addEventListener('click', () => {
         alert("Your cart is empty!");
     }
 });
+
+const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
 
 // Initialize 
 displayProducts();
